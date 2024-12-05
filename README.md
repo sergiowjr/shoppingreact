@@ -6,23 +6,23 @@ This project has 50 points for 20 tasks. As part of the assignment, at least one
 ## Grading Criteria Overview
 ### 50 points, 20 tasks
 ### GitHub (6 points, 2 tasks)
-1. GitHub repository public URL: 2 points
+	1. GitHub repository public URL: 2 points
 
 2. Redux-related files and code: 4 points
 
 ### Landing page (5 points, 4 tasks)
-1. Background image: 1 point
+	1. Background image: 1 point
 
-2. Paragraph about the company: 1 point
+	2. Paragraph about the company: 1 point
 
-3. Company name: 1 point
+	3. Company name: 1 point
 
-4. Get Started button linking to the product listing page: 2 points
+	4. Get Started button linking to the product listing page: 2 points
 
 ### Product listing page (9 points, 3 tasks)
-1. Six unique houseplants for sale, each displaying thumbnail, name, and price: 2 points
+	1. Six unique houseplants for sale, each displaying thumbnail, name, and price: 2 points
 
-2. Group the plants into at least three categories on the page: 1 point
+	2. Group the plants into at least three categories on the page: 1 point
 
 3. An Add to Cart button for each plant, each with the following behavior: 6 points
 
