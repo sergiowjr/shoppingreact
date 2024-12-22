@@ -55,3 +55,10 @@ After selecting it, the appropriate plant gets added to the shopping cart.
 7. Decrease button for each plant type in the cart that decrements the number of items in the cart by one each time it's clicked and updates all appropriate values: 4 points
 
 8. A delete button: 2 points
+
+===
+
+SETUP
+
+npm install
+npm run dev
