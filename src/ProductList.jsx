@@ -271,6 +271,7 @@ function ProductList() {
 
     <div>
       <div className="navbar" style={styleObj}>
+
         <div className="tag">
           <div className="luxury">
             <img src="https://cdn.pixabay.com/photo/2020/08/05/13/12/eco-5465432_1280.png" alt="" />
@@ -281,16 +282,19 @@ function ProductList() {
               </div>
             </a>
           </div>
-
         </div>
+
         <div style={styleObjUl}>
-          <div> <a href="#" onClick={(e) => handlePlantsClick(e)} style={styleA}>Plants</a></div>
+
+          <div>
+            <a href="#" onClick={(e) => handlePlantsClick(e)} style={styleA} >Plants</a>
+          </div>
 
           <div>
             <a href="#" onClick={(e) => handleCartClick(e)} style={styleA}>
 
               <h1 className='cart'>
-                
+
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" id="IconChangeColor" height="68" width="68">
                   <rect width="156" height="156" fill="none">
                   </rect>
@@ -307,39 +311,41 @@ function ProductList() {
 
         </div>
       </div>
-      {!showCart ? (
-        <div className="product-grid">
-          
-          {plantsArray.map((category, categoryIndex) => (
-            <div key={categoryIndex}>
-              <h1>{category.category}</h1>
-              <div className="product-list">
-                {category.plants.map((plant, plantIndex) => (
-                  <div key={plantIndex} className='product-card'>
-                    <img className="product-image" src={plant.image} alt={plant.name} />
-                    <div className='product-title'> {plant.name} </div>
-                    <p style={{ color: 'red' }}> {plant.cost}</p>
-                    <p>{plant.description}</p>
+      {
+        !showCart ? (
+          <div className="product-grid">
 
-                    <button
-                      className="product-button"
-                      onClick={() => handleAddToCart(plant)}
-                    > Add to Cart</button>
+            {plantsArray.map((category, categoryIndex) => (
+              <div key={categoryIndex}>
+                <h1 style={{ background: "rgba(0, 255, 0, 0.25)" }}>{category.category}</h1>
+                <div className="product-list">
+                  {category.plants.map((plant, plantIndex) => (
+                    <div key={plantIndex} className='product-card'>
+                      <img className="product-image" src={plant.image} alt={plant.name} />
+                      <div className='product-title'> {plant.name} </div>
+                      <p style={{ color: 'red' }}> {plant.cost}</p>
+                      <p>{plant.description}</p>
+
+                      <button
+                        className="product-button"
+                        onClick={() => handleAddToCart(plant)}
+                      > Add to Cart</button>
 
 
-                  </div>
-                ))}
+                    </div>
+                  ))}
+
+                </div>
 
               </div>
+            ))}
 
-            </div>
-          ))}
-
-        </div>
-      ) : (
-        <CartItem onContinueShopping={handleContinueShopping} />
-      )}
-    </div>
+          </div>
+        ) : (
+          <CartItem onContinueShopping={handleContinueShopping} />
+        )
+      }
+    </div >
   );
 }
 
