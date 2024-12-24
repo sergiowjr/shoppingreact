@@ -19,7 +19,6 @@ const CartItem = ({ onContinueShopping }) => {
     }, 0).toFixed(0);
   };
 
-  //const handleContinueShopping = (e) => {
   const handleContinueShopping = () => {
     onContinueShopping();
   };
@@ -37,6 +36,7 @@ const CartItem = ({ onContinueShopping }) => {
 
   const handleRemove = (item) => {
     dispatch(removeItem(item.name));
+    totitem = totitem - 1;
   };
 
   const calculateTotalCost = (item) => {

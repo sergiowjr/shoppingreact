@@ -6,6 +6,8 @@ import { addItem } from './CartSlice';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 
+var totitem = 0;
+
 function ProductList() {
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.items);
@@ -23,6 +25,7 @@ function ProductList() {
       [product.name]: true,
     }));
     setDisabledProducts([...disabledProducts, product.name]);
+    totitem++;
   }
 
   const plantsArray = [
@@ -263,8 +266,6 @@ function ProductList() {
     setShowCart(false);
   };
 
-  //const handleContinueShopping = (e) => {
-  //  e.preventDefault();
   const handleContinueShopping = () => {
     setShowCart(false);
   };
@@ -296,7 +297,7 @@ function ProductList() {
             <a href="#" onClick={(e) => handleCartClick(e)} style={styleA}>
 
               <h1 className='cart'>
-
+                {totitem}
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" id="IconChangeColor" height="68" width="68">
                   <rect width="156" height="156" fill="none">
                   </rect>
