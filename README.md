@@ -26,11 +26,11 @@ This project has 50 points for 20 tasks. As part of the assignment, at least one
 
 3. An Add to Cart button for each plant, each with the following behavior: 6 points
 
-After selecting it, the shopping cart icon increases by one.
+3.1. After selecting it, the shopping cart icon increases by one.
 
-After selecting it, the button becomes disabled.
+3.2. After selecting it, the button becomes disabled. **--OK--**
 
-After selecting it, the appropriate plant gets added to the shopping cart. **--OK--**
+3.3. After selecting it, the appropriate plant gets added to the shopping cart. **--OK--**
 
 ### Header (7 points, 3 tasks)
 1. Displays on both the product listing page and shopping cart page 2 points
