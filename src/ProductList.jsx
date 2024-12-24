@@ -9,6 +9,7 @@ import { useDispatch } from 'react-redux';
 function ProductList() {
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.items);
+  const [disabledProducts, setDisabledProducts] = useState([]);
 
   const [showCart, setShowCart] = useState(false);
   const [showPlants, setShowPlants] = useState(false);
@@ -21,6 +22,7 @@ function ProductList() {
       ...prevState,
       [product.name]: true,
     }));
+    setDisabledProducts([...disabledProducts, product.name]);
   }
 
   const plantsArray = [
@@ -327,10 +329,11 @@ function ProductList() {
                       <p>{plant.description}</p>
 
                       <button
-                        className="product-button"
+                        className={disabledProducts.includes(plant.name) == 0 ? " product-button" : " product-button added-to-cart"}
                         onClick={() => handleAddToCart(plant)}
-                      > Add to Cart</button>
-
+                        disabled={disabledProducts.includes(plant.name)}
+                      > Add to Cart
+                      </button>
 
                     </div>
                   ))}
